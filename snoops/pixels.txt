@@ -1,0 +1,273 @@
+Frame 4165: 16 bytes on wire (128 bits), 16 bytes captured (128 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0b 00 07 00 04 00 08 01 00 ff ff 2a 2b   ..............*+
+
+Frame 4174: 14 bytes on wire (112 bits), 14 bytes captured (112 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 09 00 05 00 04 00 01 08 01 00 0a         .."...........
+
+Frame 4179: 16 bytes on wire (128 bits), 16 bytes captured (128 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0b 00 07 00 04 00 10 01 00 ff ff 00 28   ...............(
+
+Frame 4181: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 0c 00 08 00 04 00 11 06 01 00 06 00 d0   ..".............
+0010  ff                                                .
+
+Frame 4182: 16 bytes on wire (128 bits), 16 bytes captured (128 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0b 00 07 00 04 00 10 07 00 ff ff 00 28   ...............(
+
+Frame 4185: 14 bytes on wire (112 bits), 14 bytes captured (112 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 09 00 05 00 04 00 01 10 07 00 0a         .."...........
+
+Frame 4186: 16 bytes on wire (128 bits), 16 bytes captured (128 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0b 00 07 00 04 00 08 01 00 06 00 02 28   ...............(
+
+Frame 4188: 14 bytes on wire (112 bits), 14 bytes captured (112 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 09 00 05 00 04 00 01 08 01 00 0a         .."...........
+
+Frame 4189: 16 bytes on wire (128 bits), 16 bytes captured (128 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0b 00 07 00 04 00 08 01 00 06 00 03 28   ...............(
+
+Frame 4192: 25 bytes on wire (200 bits), 25 bytes captured (200 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 14 00 10 00 04 00 09 07 02 00 04 03 00   ..".............
+0010  d1 ff 04 00 10 05 00 d2 ff                        .........
+
+Frame 4193: 16 bytes on wire (128 bits), 16 bytes captured (128 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0b 00 07 00 04 00 08 05 00 06 00 03 28   ...............(
+
+Frame 4196: 14 bytes on wire (112 bits), 14 bytes captured (112 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 09 00 05 00 04 00 01 08 05 00 0a         .."...........
+
+Frame 4197: 14 bytes on wire (112 bits), 14 bytes captured (112 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 09 00 05 00 04 00 04 06 00 06 00         ..............
+
+Frame 4199: 15 bytes on wire (120 bits), 15 bytes captured (120 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 0a 00 06 00 04 00 05 01 06 00 02 29      .."...........)
+
+Frame 4204: 12 bytes on wire (96 bits), 12 bytes captured (96 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 07 00 03 00 04 00 02 05 02               ............
+
+Frame 4206: 12 bytes on wire (96 bits), 12 bytes captured (96 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 07 00 03 00 04 00 03 02 02               ..".........
+
+Frame 4208: 14 bytes on wire (112 bits), 14 bytes captured (112 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 09 00 05 00 04 00 12 06 00 01 00         ..............
+
+Frame 4214: 10 bytes on wire (80 bits), 10 bytes captured (80 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 22 05 00 01 00 04 00 13                     ..".......
+
+Frame 4331: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 12 12   .........R......
+0010  55                                                U
+
+Frame 4398: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 01 01   .........R......
+0010  55                                                U
+
+Frame 4399: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 0d 0d   .........R......
+0010  55                                                U
+
+Frame 4531: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  00 ff ff ff ff 55                                 .....U
+
+Frame 4652: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  01 ff 00 00 02 55                                 .....U
+
+Frame 4718: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  02 00 ff 00 03 55                                 .....U
+
+Frame 4790: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  03 00 00 ff 04 55                                 .....U
+
+Frame 4950: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  ff ff ff ff fe 55                                 .....U
+
+Frame 5011: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  fe ff 00 00 ff 55                                 .....U
+
+Frame 5072: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  fd 00 ff 00 fe 55                                 .....U
+
+Frame 5136: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 11 00 0d 00 04 00 52 03 00 bc 01 01 00   .........R......
+0010  fc 00 00 ff fd 55                                 .....U

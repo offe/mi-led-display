@@ -1,0 +1,472 @@
+No.     Time           Source                Destination           Protocol Length Info
+  22586 11269.793480   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22586: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 12 12   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22603 11270.598276   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22603: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 01 01   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22604 11270.614371   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22604: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 0d 0d   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22690 11275.664054   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22690: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 0d 0d   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22691 11275.671995   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22691: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 13 13   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22694 11275.805326   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      18     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22694: 18 bytes on wire (144 bits), 18 bytes captured (144 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0d 00 09 00 04 00 52 03 00 bc 0f f1 08   .........R......
+0010  08 55                                             .U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22695 11275.813541   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22695: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 01 00   ...l.h...R......
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22700 11275.925787   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22700: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 02 00   ...l.h...R......
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 ff 00 00 ff 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22702 11276.041626   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22702: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 03 00   ...l.h...R......
+0010  00 00 00 00 00 00 00 00 00 00 00 00 ff 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 ff 00 00 00 00 00 00   ................
+0050  00 00 00 00 ff ff ff ff ff ff 00 00 00 ff ff ff   ................
+0060  ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 fe   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22706 11276.154710   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22706: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 04 00   ...l.h...R......
+0010  00 00 00 00 00 00 00 00 00 ff 00 00 00 00 00 00   ................
+0020  00 ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 ff 00 00 00 00 00 00 00 ff ff   ................
+0050  ff 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff   ................
+0060  ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 02   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22712 11276.267432   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22712: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 05 00   ...l.h...R......
+0010  00 00 00 00 00 00 ff 00 00 00 00 ff ff ff 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 ff 00 00 00 00 ff ff ff 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 ff ff ff 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22716 11276.380816   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22716: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 06 00   ...l.h...R......
+0010  00 00 00 00 00 00 ff 00 00 00 00 ff ff ff 00 00   ................
+0020  00 00 00 00 ff ff ff ff ff ff 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 ff 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff   ................
+0050  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+0060  ff ff ff 00 00 00 00 00 ff 00 00 00 00 00 00 f1   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22717 11276.493733   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22717: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 07 00   ...l.h...R......
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff   ................
+0020  ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 ff 00 00 ff 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 ff 00 00 ff 00 00 00 00 00 00 00 00 00 09   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22723 11276.608517   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22723: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 08 00   ...l.h...R......
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff   ................
+0030  00 00 ff 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 ff 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 14   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22730 11276.727201   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      18     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22730: 18 bytes on wire (144 bits), 18 bytes captured (144 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0d 00 09 00 04 00 52 03 00 bc 0f f2 08   .........R......
+0010  09 55                                             .U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22731 11276.738093   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22731: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 01 01   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22823 11283.693413   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22823: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 0d 0d   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22824 11283.697995   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22824: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 13 13   .........R......
+0010  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22831 11283.812696   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      18     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22831: 18 bytes on wire (144 bits), 18 bytes captured (144 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0d 00 09 00 04 00 52 03 00 bc 0f f1 08   .........R......
+0010  08 55                                             .U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22834 11283.824198   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22834: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 01 d8   ...l.h...R......
+0010  ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff   ................
+0020  e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9   ................
+0030  d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8   ................
+0040  ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff   ................
+0050  e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9   ................
+0060  d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 10   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22835 11283.936629   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22835: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 02 97   ...l.h...R......
+0010  d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9   ................
+0020  e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6   ................
+0030  97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97   ................
+0040  d9 e6 97 d9 e6 97 d9 e6 00 84 00 00 84 00 00 84   ................
+0050  00 00 84 00 00 84 00 00 84 00 00 84 00 00 84 00   ................
+0060  00 84 00 00 84 00 97 d9 e6 97 d9 e6 97 d9 e6 9d   ................
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22836 11284.050383   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22836: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 03 29   ...l.h...R.....)
+0010  d9 e6 29 d9 e6 29 d9 e6 00 84 00 6c c0 81 6c c0   ..)..).....l..l.
+0020  81 6c c0 81 6c c0 81 6c c0 81 6c c0 81 6c c0 81   .l..l..l..l..l..
+0030  6c c0 81 00 84 00 29 d9 e6 29 d9 e6 29 d9 e6 29   l.....)..)..)..)
+0040  d9 e6 29 d9 e6 29 d9 e6 00 84 00 6c c0 81 6c c0   ..)..).....l..l.
+0050  81 00 84 00 6c c0 81 6c c0 81 00 84 00 6c c0 81   ....l..l.....l..
+0060  6c c0 81 00 84 00 29 d9 e6 29 d9 e6 29 d9 e6 80   l.....)..)..)...
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22842 11284.164149   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22842: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 04 48   ...l.h...R.....H
+0010  d4 b6 48 d4 b6 48 d4 b6 00 84 00 6c c0 81 6c c0   ..H..H.....l..l.
+0020  81 00 84 00 6c c0 81 6c c0 81 00 84 00 6c c0 81   ....l..l.....l..
+0030  6c c0 81 00 84 00 48 d4 b6 48 d4 b6 48 d4 b6 48   l.....H..H..H..H
+0040  d4 b6 48 d4 b6 48 d4 b6 00 84 00 6c c0 81 6c c0   ..H..H.....l..l.
+0050  81 00 84 00 6c c0 81 6c c0 81 00 84 00 6c c0 81   ....l..l.....l..
+0060  6c c0 81 00 84 00 48 d4 b6 48 d4 b6 48 d4 b6 27   l.....H..H..H..'
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22844 11284.280014   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22844: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 05 6d   ...l.h...R.....m
+0010  d3 92 6d d3 92 6d d3 92 00 84 00 6c c0 81 6c c0   ..m..m.....l..l.
+0020  81 6c c0 81 6c c0 81 6c c0 81 6c c0 81 6c c0 81   .l..l..l..l..l..
+0030  6c c0 81 00 84 00 6d d3 92 6d d3 92 6d d3 92 48   l.....m..m..m..H
+0040  d4 85 48 d4 85 48 d4 85 00 84 00 6c c0 81 6c c0   ..H..H.....l..l.
+0050  81 6c c0 81 6c c0 81 6c c0 81 6c c0 81 6c c0 81   .l..l..l..l..l..
+0060  6c c0 81 00 84 00 48 d4 85 48 d4 85 48 d4 85 a6   l.....H..H..H...
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22850 11284.396603   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22850: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 06 48   ...l.h...R.....H
+0010  d4 85 48 d4 85 48 d4 85 00 84 00 00 84 00 00 84   ..H..H..........
+0020  00 00 84 00 00 84 00 00 84 00 00 84 00 00 84 00   ................
+0030  00 84 00 00 84 00 48 d4 85 48 d4 85 48 d4 85 54   ......H..H..H..T
+0040  e8 81 54 e8 81 54 e8 81 54 e8 81 54 e8 81 00 84   ..T..T..T..T....
+0050  00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   .l..l..l..l.....
+0060  54 e8 81 54 e8 81 54 e8 81 54 e8 81 54 e8 81 21   T..T..T..T..T..!
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22852 11284.510029   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22852: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 07 2e   ...l.h...R......
+0010  d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 00 84   ._.._.._.._.._..
+0020  00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   .l..l..l..l.....
+0030  2e d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 6d   .._.._.._.._.._m
+0040  c7 92 6d c7 92 6d c7 92 6d c7 92 6d c7 92 00 84   ..m..m..m..m....
+0050  00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   .l..l..l..l.....
+0060  6d c7 92 6d c7 92 6d c7 92 6d c7 92 6d c7 92 1e   m..m..m..m..m...
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22858 11284.623901   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      113    Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22858: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 6c 00 68 00 04 00 52 03 00 bc 0f 08 54   ...l.h...R.....T
+0010  93 81 54 93 81 54 93 81 54 93 81 54 93 81 00 84   ..T..T..T..T....
+0020  00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   .l..l..l..l.....
+0030  54 93 81 54 93 81 54 93 81 54 93 81 54 93 81 54   T..T..T..T..T..T
+0040  93 81 54 93 81 54 93 81 54 93 81 54 93 81 00 84   ..T..T..T..T....
+0050  00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   .l..l..l..l.....
+0060  54 93 81 54 93 81 54 93 81 54 93 81 54 93 81 af   T..T..T..T..T...
+0070  55                                                U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22860 11284.745362   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      18     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22860: 18 bytes on wire (144 bits), 18 bytes captured (144 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0d 00 09 00 04 00 52 03 00 bc 0f f2 08   .........R......
+0010  09 55                                             .U
+
+No.     Time           Source                Destination           Protocol Length Info
+  22861 11284.758244   XiaomiCommun_2c:69:15 (Redmi Pad SE 8.7) 1e:a6:bb:11:41:6b (MI Matrix Display) ATT      17     Sent Write Command, Handle: 0x0003 (Unknown)
+
+Frame 22861: 17 bytes on wire (136 bits), 17 bytes captured (136 bits)
+Bluetooth
+Bluetooth HCI H4
+Bluetooth HCI ACL Packet
+Bluetooth L2CAP Protocol
+Bluetooth Attribute Protocol
+
+0000  02 00 02 0c 00 08 00 04 00 52 03 00 bc 00 01 01   .........R......
+0010  55                                                U
