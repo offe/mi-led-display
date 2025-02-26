@@ -1,4 +1,5 @@
 import asyncio
+import time
 from bleak import BleakScanner, BleakClient
 
 # Service and characteristic UUIDs as discovered
@@ -75,9 +76,9 @@ async def send_picture(client: BleakClient, picture: list):
         data = bytes.fromhex(cmd)
         #print(f"Sending init command: {cmd}")
         await client.write_gatt_char(CHARACTERISTIC_UUID, data)
-        await asyncio.sleep(0.02)
+        await asyncio.sleep(0.002)
     #print("Initialization complete.\n")
-    print("Sending full-picture update...")
+    print("Sending full-picture update...", time.time())
 
     # For a 16x16 image, we have 16 rows.
     # Each block covers 2 rows = 32 pixels.
@@ -90,19 +91,28 @@ async def send_picture(client: BleakClient, picture: list):
         #print(f"Block {block_index}: Command {command.hex()}")
         await client.write_gatt_char(CHARACTERISTIC_UUID, command)
         # Delay between blocks (adjust as needed)
-        await asyncio.sleep(0.02)
+        await asyncio.sleep(0.025)
     #print("Full picture update sent!")
     # Send end commands (if required)
     end_commands = [
         "bc0ff2080955",
-        "bc00010155"
+        #"pause",
+        #"bc00010155",
+
+        # Trying to persist the image
+        #"bc0011f10355" # f1 might be which slot to store the image in, f1, f2, .. The second last byte seem to change with the number
+        #"bc0011f20455" 
     ]
     #print("\nSending end commands...")
     for cmd in end_commands:
-        data = bytes.fromhex(cmd)
-        #print(f"Sending end command: {cmd}")
-        await client.write_gatt_char(CHARACTERISTIC_UUID, data)
-        await asyncio.sleep(0.02)
+        if cmd == "pause":
+            print("pause")
+            await asyncio.sleep(1)
+        else:
+            data = bytes.fromhex(cmd)
+            #print(f"Sending end command: {cmd}")
+            await client.write_gatt_char(CHARACTERISTIC_UUID, data)
+            await asyncio.sleep(0.002)
     #print("End complete.\n")
 
 async def main():
