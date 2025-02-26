@@ -7,6 +7,7 @@ This project provides a set of Python scripts to interface with the Merkury Inno
 
 - `draw_picture.py`: Script to draw a static picture on the display.
 - `draw_pixels.py`: Script to send color data to individual pixels on the display.
+- `draw_file.py` : Script to load a static file and send to picture to the display
 - `index.html`: Web-based attempt to connect to the display (note: does not work due to service listing issues in browsers for this hardware).
 
 ## Getting Started
@@ -30,6 +31,7 @@ Install the required Python libraries using pip:
 ```bash
 python3 -m venv venv
 python3 -m pip install bleak
+python3 -m pip install pil
 ```
 
 ### Running the Scripts
@@ -39,6 +41,7 @@ To run the scripts, use the following commands:
 ```bash
 python3 draw_picture.py
 python3 draw_pixels.py
+python3 draw_file.py /path/to/image.png
 ```
 
 ## Collecting Bluetooth Snoop Logs
