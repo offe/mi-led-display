@@ -17,7 +17,7 @@ def parse_hex_input(hex_str: str) -> bytearray:
         print("Invalid hex input. Please enter a valid hex string.")
         return None
 
-async def find_device(timeout=20):
+async def find_device(name="MI Matrix Display", timeout=20):
     """
     Scans for the MI Matrix Display device.
     """
@@ -29,7 +29,7 @@ async def find_device(timeout=20):
     start_time = asyncio.get_event_loop().time()
     while (asyncio.get_event_loop().time() - start_time) < timeout:
         for device in scanner.discovered_devices:
-            if device.name == "MI Matrix Display":
+            if device.name == name:
                 target_device = device
                 break
         if target_device:

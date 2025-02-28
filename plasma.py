@@ -21,6 +21,109 @@ display_pixels = [[[0, 0, 0] for _ in range(WIDTH)] for _ in range(HEIGHT)]
 # ============================== #
 #     PURE FUNCTIONS (IMPORTABLE)
 # ============================== #
+from datetime import datetime
+
+# 3x5 pixel representations of digits 0-9
+DIGIT_MAP = {
+    '0': [
+        "###",
+        "# #",
+        "# #",
+        "# #",
+        "###"
+    ],
+    '1': [
+        " # ",
+        "## ",
+        " # ",
+        " # ",
+        "###"
+    ],
+    '2': [
+        "###",
+        "  #",
+        "###",
+        "#  ",
+        "###"
+    ],
+    '3': [
+        "###",
+        "  #",
+        "###",
+        "  #",
+        "###"
+    ],
+    '4': [
+        "# #",
+        "# #",
+        "###",
+        "  #",
+        "  #"
+    ],
+    '5': [
+        "###",
+        "#  ",
+        "###",
+        "  #",
+        "###"
+    ],
+    '6': [
+        "###",
+        "#  ",
+        "###",
+        "# #",
+        "###"
+    ],
+    '7': [
+        "###",
+        "  #",
+        "  #",
+        "  #",
+        "  #"
+    ],
+    '8': [
+        "###",
+        "# #",
+        "###",
+        "# #",
+        "###"
+    ],
+    '9': [
+        "###",
+        "# #",
+        "###",
+        "  #",
+        "###"
+    ]
+}
+
+def draw_alpha_pixel(x, y, color, alpha):
+    plasma_pixels[y][x] = [
+        (1 - alpha) * plasma_pixels[y][x][j] + alpha * color[j] for j in range(3)
+    ]
+
+def update_clock():
+    now = datetime.now()
+    time_string = now.strftime("%H%M")
+    start_x, start_y = 0, 2  # Position of the clock on the grid
+    color = [0, 0, 0]
+    alpha = 0.75
+    
+    for i, digit in enumerate(time_string):
+        digit_pattern = DIGIT_MAP[digit]
+        x_offset = start_x + (i * 4) + (0 if i>1 else 1)  # Space between digits
+        y_offset = start_y + (6 if i>1 else 0)  # Space between digits
+        
+        for dy, row in enumerate(digit_pattern):
+            for dx, pixel in enumerate(row):
+                if pixel == "#":
+                    #plasma_pixels[y_offset + dy][x_offset + dx] = [0, 0, 0]  
+                    draw_alpha_pixel(x_offset + dx, y_offset + dy, color, alpha)
+
+    progress_x = start_x + int((WIDTH-1)*(now.second / 59.0))
+    progress_y = HEIGHT - 1
+    draw_alpha_pixel(progress_x, progress_y, color, alpha)
+
 
 def hsv_to_hex(h, s, v):
     r, g, b = colorsys.hsv_to_rgb(h, s, v)
@@ -118,6 +221,7 @@ def main():
 
     def update(t):
         update_plasma(t)
+        update_clock()
         update_error()
         update_display()
         show_plasma()

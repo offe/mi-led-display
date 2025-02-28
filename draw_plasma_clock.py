@@ -2,7 +2,7 @@
 import asyncio
 import random
 from bleak import BleakScanner, BleakClient
-from plasma import update_plasma, update_error, update_display, top_error_positions, display_pixels, UPDATE_PIXEL_COUNT, WIDTH
+from plasma import update_plasma, update_clock, update_error, update_display, top_error_positions, display_pixels, UPDATE_PIXEL_COUNT, WIDTH
 
 # Service and characteristic UUIDs as discovered
 SERVICE_UUID = "0000ffd0-0000-1000-8000-00805f9b34fb"
@@ -73,6 +73,7 @@ async def main():
             while True:
                 # Update plasma state
                 update_plasma(t)
+                update_clock()
                 update_error()
                 update_display()
 
