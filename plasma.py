@@ -26,103 +26,110 @@ from datetime import datetime
 # 3x5 pixel representations of digits 0-9
 DIGIT_MAP = {
     '0': [
-        "###",
-        "# #",
-        "# #",
-        "# #",
-        "###"
+        "cfc",
+        "f f",
+        "f f",
+        "f f",
+        "cfc"
     ],
     '1': [
-        " # ",
-        "## ",
-        " # ",
-        " # ",
-        "###"
+        " f ",
+        "ff ",
+        " f ",
+        " f ",
+        "fff"
     ],
     '2': [
-        "###",
-        "  #",
-        "###",
-        "#  ",
-        "###"
+        "cfc",
+        "  f",
+        "cfc",
+        "f  ",
+        "fff"
     ],
     '3': [
-        "###",
-        "  #",
-        "###",
-        "  #",
-        "###"
+        "ffc",
+        "  f",
+        " ff",
+        "  f",
+        "ffc"
     ],
     '4': [
-        "# #",
-        "# #",
-        "###",
-        "  #",
-        "  #"
+        "c f",
+        "f f",
+        "fff",
+        "  f",
+        "  f"
     ],
     '5': [
-        "###",
-        "#  ",
-        "###",
-        "  #",
-        "###"
+        "fff",
+        "f  ",
+        "ffc",
+        "  f",
+        "ffc"
     ],
     '6': [
-        "###",
-        "#  ",
-        "###",
-        "# #",
-        "###"
+        "cff",
+        "f  ",
+        "ffc",
+        "f f",
+        "cfc"
     ],
     '7': [
-        "###",
-        "  #",
-        "  #",
-        "  #",
-        "  #"
+        "fff",
+        "  f",
+        " f ",
+        " f ",
+        " f "
     ],
     '8': [
-        "###",
-        "# #",
-        "###",
-        "# #",
-        "###"
+        "cfc",
+        "f f",
+        "cfc",
+        "f f",
+        "cfc"
     ],
     '9': [
-        "###",
-        "# #",
-        "###",
-        "  #",
-        "###"
+        "cfc",
+        "f f",
+        "cff",
+        "  f",
+        "ffc"
     ]
 }
 
+def clamp(value, min_val=0, max_val=255):
+    return max(min(value, max_val), min_val)
+
 def draw_alpha_pixel(x, y, color, alpha):
     plasma_pixels[y][x] = [
-        (1 - alpha) * plasma_pixels[y][x][j] + alpha * color[j] for j in range(3)
+        clamp(int((1 - alpha) * plasma_pixels[y][x][j] + alpha * color[j])) 
+        for j in range(3)
     ]
 
 def update_clock():
     now = datetime.now()
     time_string = now.strftime("%H%M")
     start_x, start_y = 0, 2  # Position of the clock on the grid
+    #color = [0xff, 0xff, 0xff]
     color = [0, 0, 0]
-    alpha = 0.75
+    alpha = 1
     
     for i, digit in enumerate(time_string):
-        digit_pattern = DIGIT_MAP[digit]
         x_offset = start_x + (i * 4) + (0 if i>1 else 1)  # Space between digits
         y_offset = start_y + (6 if i>1 else 0)  # Space between digits
         
+        digit_pattern = DIGIT_MAP[digit]
         for dy, row in enumerate(digit_pattern):
             for dx, pixel in enumerate(row):
-                if pixel == "#":
+                if pixel != " " :
+                    pixel_value = int(pixel, 16)
                     #plasma_pixels[y_offset + dy][x_offset + dx] = [0, 0, 0]  
-                    draw_alpha_pixel(x_offset + dx, y_offset + dy, color, alpha)
+                    draw_alpha_pixel(x_offset + dx, y_offset + dy, color, alpha*pixel_value/15.0)
 
     progress_x = start_x + int((WIDTH-1)*(now.second / 59.0))
     progress_y = HEIGHT - 1
     draw_alpha_pixel(progress_x, progress_y, color, alpha)
+    error_values[progress_y][progress_x] += 100
 
 
 def hsv_to_hex(h, s, v):
@@ -130,7 +137,8 @@ def hsv_to_hex(h, s, v):
     return '#%02x%02x%02x' % (int(r * 255), int(g * 255), int(b * 255))
 
 def rgb_to_hex(rgb):
-    return '#%02x%02x%02x' % (int(rgb[0] * 255), int(rgb[1] * 255), int(rgb[2] * 255))
+    #return '#%02x%02x%02x' % (int(rgb[0] * 255), int(rgb[1] * 255), int(rgb[2] * 255))
+    return '#%02x%02x%02x' % (rgb[0], rgb[1], rgb[2])
 
 def update_plasma(t):
     for y in range(HEIGHT):
@@ -143,13 +151,15 @@ def update_plasma(t):
             )
             normalized = (color_value + 4) / 8
             hue = (normalized + t * 0.05) % 1.0
-            r, g, b = colorsys.hsv_to_rgb(hue, 1, 1)
+            #r, g, b = colorsys.hsv_to_rgb(hue, 1, 1)
+            r, g, b = [int(c * 255) for c in colorsys.hsv_to_rgb(hue, 1, 1)]
             pixel = plasma_pixels[y][x]
             pixel[0] = r
             pixel[1] = g
             pixel[2] = b
 
 def partial_sort_error_positions():
+    #for i in range(len(top_error_positions) - 2, -1, -1):
     for i in range(len(top_error_positions) - 1):
         idx_a = top_error_positions[i]
         idx_b = top_error_positions[i + 1]

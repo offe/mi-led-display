@@ -12,7 +12,7 @@ async def find_device(name="MI Matrix Display", timeout=20):
     """
     Scans for the MI Matrix Display device.
     """
-    print("Scanning for BLE devices...")
+    print("Scanning for MI Matrix devices...")
     scanner = BleakScanner()
     await scanner.start()
     
@@ -66,8 +66,6 @@ async def main():
                         await client.write_gatt_char(CHARACTERISTIC_UUID, data)
                         await asyncio.sleep(0.2)
 
-                    print("\nInitialization complete. Starting plasma effect...")
-
                     t = random.randrange(0, 1000000)
                     while True:
                         # Update plasma state
@@ -79,16 +77,19 @@ async def main():
                         # Send the UPDATE_PIXEL_COUNT last positions from top_error_positions
                         for idx in top_error_positions[-UPDATE_PIXEL_COUNT:]:
                             y, x = divmod(idx, WIDTH)  # Assuming a 16x16 grid
-                            r, g, b = [int(c * 255) for c in display_pixels[y][x]]
+                            #r, g, b = [int(c * 255) for c in display_pixels[y][x]]
+                            r, g, b = [c for c in display_pixels[y][x]]
                             command = get_set_pixel_command(idx, r, g, b)
                             await client.write_gatt_char(CHARACTERISTIC_UUID, command)
 
-                        t += 0.01
-                        await asyncio.sleep(0.033)  # Roughly 30 FPS
+                        t += 0.001
+                        await asyncio.sleep(0.003)  # Roughly 30 FPS
                 else:
                     print("Failed to connect.")
         except BleakError as e:
             print("Lost connection")
+        except TimeoutError as e:
+            print("TimeoutError")
 
 if __name__ == "__main__":
     asyncio.run(main())
