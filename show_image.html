@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LED Display Control</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #status {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LED Display Control</h1>
+    <button onclick="connectAndSend()">Connect & Send Image</button>
+    <button onclick="disconnect()">Disconnect</button>
+    <p id="status">Status: Waiting for connection...</p>
+
+    <script>
+      let device, server, service, characteristic;
+
+      async function disconnect() {
+        if (device) {
+          try {
+            if (server && server.connected) {
+              await device.gatt.disconnect();
+              document.getElementById("status").innerText =
+                "Status: Disconnected from device.";
+              console.log("Device disconnected.");
+            } else {
+              document.getElementById("status").innerText =
+                "Status: No active connection.";
+            }
+          } catch (error) {
+            console.error("Error disconnecting:", error);
+            document.getElementById("status").innerText =
+              "Status: Error disconnecting.";
+          }
+        } else {
+          document.getElementById("status").innerText =
+            "Status: No device to disconnect.";
+        }
+      }
+
+      async function connectAndSend() {
+        try {
+          document.getElementById("status").innerText =
+            "Status: Requesting Bluetooth device...";
+
+          device = await navigator.bluetooth.requestDevice({
+            filters: [{ name: "MI Matrix Display" }], // Change this if needed
+            optionalServices: ["0000ffd0-0000-1000-8000-00805f9b34fb"],
+          });
+
+          document.getElementById("status").innerText =
+            "Status: Connecting to device...";
+
+          server = await device.gatt.connect();
+          service = await server.getPrimaryService(
+            "0000ffd0-0000-1000-8000-00805f9b34fb"
+          );
+          characteristic = await service.getCharacteristic(
+            "0000ffd1-0000-1000-8000-00805f9b34fb"
+          );
+
+          document.getElementById("status").innerText =
+            "Status: Sending initialization command...";
+
+          const initCommand = new Uint8Array([
+            0xbc, 0x0f, 0xf1, 0x08, 0x08, 0x55,
+          ]);
+          await characteristic.writeValue(initCommand);
+          await delay(2); // 2ms delay
+
+          document.getElementById("status").innerText =
+            "Status: Sending image data...";
+
+          const imageData = createPicture(1); // Generate image data
+          await sendPicture(characteristic, imageData);
+
+          document.getElementById("status").innerText =
+            "Status: Image sent successfully!";
+        } catch (error) {
+          console.error("Error:", error);
+          document.getElementById("status").innerText =
+            "Status: Error - " + error.message;
+        }
+      }
+
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      function createPicture(n) {
+        let picture = [];
+        for (let y = 0; y < 16; y++) {
+          for (let x = 0; x < 16; x++) {
+            let r = x * 16;
+            let g = y * 16;
+            let b = n * 255;
+            picture.push([r, g, b]); // Each pixel is an array [r, g, b]
+          }
+        }
+        return picture;
+      }
+
+      async function sendPicture(characteristic, imageData) {
+        for (let blockIndex = 0; blockIndex < 8; blockIndex++) {
+          let blockData = new Uint8Array(100);
+
+          blockData[0] = 0xbc;
+          blockData[1] = 0x0f;
+          blockData[2] = (blockIndex + 1) & 0xff;
+
+          for (let i = 0; i < 32; i++) {
+            let pixelIndex = blockIndex * 32 + i;
+            blockData[3 + i * 3] = imageData[pixelIndex][0]; // Red
+            blockData[3 + i * 3 + 1] = imageData[pixelIndex][1]; // Green
+            blockData[3 + i * 3 + 2] = imageData[pixelIndex][2]; // Blue
+          }
+
+          blockData[99] = 0x55;
+
+          console.log(`Sending block ${blockIndex + 1}/8`);
+          await characteristic.writeValue(blockData);
+          await delay(5);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -95,7 +95,7 @@ async def main():
                 pixel_index = (pixel_index + 1) % 256
                 if pixel_index == 0:
                     screen += 1
-                await asyncio.sleep(0.002)
+                await asyncio.sleep(0.003)
                 # Takes about 0.7 sec to update all 256 pixels
                 # That's 360 pixels per second
                 # So if we want 30 fps that means we only have time to update 12 pixels per frame.. 

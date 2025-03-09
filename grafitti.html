@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graffiti Display</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 20px;
+      }
+      .canvas-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 2px solid #000;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+      }
+      .pixel {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #222;
+        background-color: black;
+      }
+      button,
+      input {
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      input[type="color"] {
+        width: 50px;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <button id="connectButton" onclick="toggleConnection()">Connect</button>
+      <p id="status">Status: Disconnected</p>
+      <input type="color" id="colorPicker" value="#ff0000" />
+      <button onclick="clearCanvas()">Clear Canvas</button>
+    </div>
+    <div class="canvas-container" id="canvas"></div>
+
+    <script>
+      let device, server, service, characteristic;
+      let connected = false;
+      let isDrawing = false;
+
+      async function toggleConnection() {
+        if (connected) {
+          disconnect();
+        } else {
+          await connect();
+        }
+      }
+
+      async function connect() {
+        try {
+          document.getElementById("status").innerText = "Status: Connecting...";
+          device = await navigator.bluetooth.requestDevice({
+            filters: [{ name: "MI Matrix Display" }],
+            optionalServices: ["0000ffd0-0000-1000-8000-00805f9b34fb"],
+          });
+
+          server = await device.gatt.connect();
+          service = await server.getPrimaryService(
+            "0000ffd0-0000-1000-8000-00805f9b34fb"
+          );
+          characteristic = await service.getCharacteristic(
+            "0000ffd1-0000-1000-8000-00805f9b34fb"
+          );
+          connected = true;
+          document.getElementById("connectButton").innerText = "Disconnect";
+          document.getElementById("status").innerText = "Status: Connected";
+
+          await startGraffitiMode();
+        } catch (error) {
+          console.error("Connection failed", error);
+          document.getElementById("status").innerText =
+            "Status: Connection failed";
+        }
+      }
+
+      function disconnect() {
+        if (device && device.gatt.connected) {
+          device.gatt.disconnect();
+        }
+        connected = false;
+        document.getElementById("connectButton").innerText = "Connect";
+        document.getElementById("status").innerText = "Status: Disconnected";
+      }
+
+      async function startGraffitiMode() {
+        let initCommands = [
+          new Uint8Array([0xbc, 0x00, 0x01, 0x01, 0x55]),
+          new Uint8Array([0xbc, 0x00, 0x0d, 0x0d, 0x55]),
+        ];
+        for (let cmd of initCommands) {
+          await characteristic.writeValue(cmd);
+          await new Promise((resolve) => setTimeout(resolve, 200));
+        }
+        console.log("Graffiti mode started");
+      }
+
+      async function clearCanvas() {
+        document.querySelectorAll(".pixel").forEach((pixel) => {
+          pixel.style.backgroundColor = "black";
+        });
+        if (connected) {
+          await startGraffitiMode();
+        }
+      }
+
+      function createCanvas() {
+        const canvas = document.getElementById("canvas");
+        canvas.addEventListener("mousedown", () => (isDrawing = true));
+        canvas.addEventListener("mouseup", () => (isDrawing = false));
+        canvas.addEventListener("mouseleave", () => (isDrawing = false));
+        canvas.addEventListener("mousemove", (event) => {
+          if (isDrawing && event.target.classList.contains("pixel")) {
+            drawPixel(event);
+          }
+        });
+
+        for (let i = 0; i < 256; i++) {
+          let pixel = document.createElement("div");
+          pixel.classList.add("pixel");
+          pixel.dataset.index = i;
+          pixel.style.backgroundColor = "black";
+          canvas.appendChild(pixel);
+        }
+      }
+
+      async function drawPixel(event) {
+        if (!connected) return;
+
+        let pixel = event.target;
+        let color = document.getElementById("colorPicker").value;
+        let r = parseInt(color.substring(1, 3), 16);
+        let g = parseInt(color.substring(3, 5), 16);
+        let b = parseInt(color.substring(5, 7), 16);
+        let pixelIndex = parseInt(pixel.dataset.index);
+
+        pixel.style.backgroundColor = color;
+        let command = new Uint8Array([
+          0xbc,
+          0x01,
+          0x01,
+          0x00,
+          pixelIndex,
+          r,
+          g,
+          b,
+          (pixelIndex + 1) % 256,
+          0x55,
+        ]);
+        await characteristic.writeValue(command);
+      }
+
+      createCanvas();
+    </script>
+  </body>
+</html>
