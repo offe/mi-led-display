@@ -1,0 +1,20 @@
+
+Power Off
+BC FF 00 FF 55
+Tells the device to turn off (turn black)
+
+Power On
+BC FF 01 00 55
+Tells the device to turn on (show something)
+
+Start grafitti mode
+BC 00 01 01 55
+BC 00 0D 0D 55
+
+Draw pixel in grafitti mode
+BC 01 01 00 PP RR GG BB QQ 55 - PP = pixel position 0-255, QQ is pixel position - 1
+Example: red top left
+BC 01 01 00 00 FF 00 00 FF 55
+
+Start slideshow mode
+BC 00 12 12 55
