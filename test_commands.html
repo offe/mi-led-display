@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LED Display Control</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #status {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #333;
+      }
+      textarea {
+        width: 80%;
+        height: 200px;
+        font-family: monospace;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LED Display Control</h1>
+    <button onclick="connectDevice()">Connect</button>
+    <button onclick="disconnectDevice()">Disconnect</button>
+    <br />
+    <textarea id="commandsArea">
+bc00010155
+bc000d0d55
+BC 01 01 00 00 FF 00 00 FF 55
+//BC 01 01 00 00 00 FF 00 FF 55
+    </textarea>
+    <br />
+    <button onclick="sendHexCommands()">Send Commands</button>
+    <p id="status">Status: Waiting for connection...</p>
+
+    <script>
+      let device, server, service, characteristic;
+
+      async function disconnectDevice() {
+        if (device && device.gatt.connected) {
+          await device.gatt.disconnect();
+          document.getElementById("status").innerText =
+            "Status: Disconnected from device.";
+          console.log("Device disconnected.");
+        } else {
+          document.getElementById("status").innerText =
+            "Status: No active connection.";
+        }
+      }
+
+      async function connectDevice() {
+        try {
+          document.getElementById("status").innerText =
+            "Status: Requesting Bluetooth device...";
+          device = await navigator.bluetooth.requestDevice({
+            filters: [{ name: "MI Matrix Display" }],
+            optionalServices: ["0000ffd0-0000-1000-8000-00805f9b34fb"],
+          });
+          document.getElementById("status").innerText =
+            "Status: Connecting to device...";
+          server = await device.gatt.connect();
+          service = await server.getPrimaryService(
+            "0000ffd0-0000-1000-8000-00805f9b34fb"
+          );
+          characteristic = await service.getCharacteristic(
+            "0000ffd1-0000-1000-8000-00805f9b34fb"
+          );
+          document.getElementById("status").innerText = "Status: Connected.";
+          console.log("Connected to", device.name);
+        } catch (error) {
+          console.error("Connection failed:", error);
+          document.getElementById("status").innerText =
+            "Status: Connection failed: " + error;
+        }
+      }
+
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function sendHexCommands() {
+        if (!characteristic) {
+          document.getElementById("status").innerText =
+            "Status: Not connected to a device.";
+          return;
+        }
+        const textarea = document.getElementById("commandsArea");
+        const lines = textarea.value
+          .split("\n")
+          .map((line) => line.trim())
+          .filter((line) => line.length > 0);
+        document.getElementById("status").innerText =
+          "Status: Sending commands...";
+        for (let hexLine of lines) {
+          if (hexLine.startsWith("//")) {
+            console.log("Skipping line: ", hexLine);
+            continue;
+          }
+          try {
+            // Convert hex string to Uint8Array. Only the bytes starting with BC are sent.
+            const data = new Uint8Array(
+              hexToBytes(hexLine.split(" ").join(""))
+            );
+            console.log("Sending command:", hexLine);
+            await characteristic.writeValue(data);
+            document.getElementById("status").innerText = "Sent: " + hexLine;
+            await delay(100); // delay 100ms between commands
+          } catch (error) {
+            console.error("Error sending command:", error);
+            document.getElementById("status").innerText =
+              "Error sending command: " + error;
+          }
+        }
+        document.getElementById("status").innerText =
+          "Status: All commands sent.";
+      }
+
+      function hexToBytes(hex) {
+        const bytes = [];
+        for (let i = 0; i < hex.length; i += 2) {
+          bytes.push(parseInt(hex.substr(i, 2), 16));
+        }
+        return bytes;
+      }
+    </script>
+  </body>
+</html>

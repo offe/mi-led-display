@@ -1,0 +1,29 @@
+// To be used in test_commands.html
+// Store in memory sequence
+bc 0f f2 08 09 55                                             
+bc 00 11 f1 03 55                                             
+bc 0f f1 08 08 55      
+  
+// Start send image (i.e. only show, don't persist)
+// bc 0f f1 08 08 55 
+                                     
+// Segment 1/8
+bc 0f 01 d8   ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff   e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9   d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8   ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff   e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9   d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 d8 ff e9 10   55                                                
+// Segment 2/8
+bc 0f 02 97   d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9   e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6   97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97 d9 e6 97   d9 e6 97 d9 e6 97 d9 e6 00 84 00 00 84 00 00 84   00 00 84 00 00 84 00 00 84 00 00 84 00 00 84 00   00 84 00 00 84 00 97 d9 e6 97 d9 e6 97 d9 e6 9d   55                                                
+// Segment 3/8
+bc 0f 03 29   d9 e6 29 d9 e6 29 d9 e6 00 84 00 6c c0 81 6c c0   81 6c c0 81 6c c0 81 6c c0 81 6c c0 81 6c c0 81   6c c0 81 00 84 00 29 d9 e6 29 d9 e6 29 d9 e6 29   d9 e6 29 d9 e6 29 d9 e6 00 84 00 6c c0 81 6c c0   81 00 84 00 6c c0 81 6c c0 81 00 84 00 6c c0 81   6c c0 81 00 84 00 29 d9 e6 29 d9 e6 29 d9 e6 80   55                                                
+// Segment 4/8
+bc 0f 04 48   d4 b6 48 d4 b6 48 d4 b6 00 84 00 6c c0 81 6c c0   81 00 84 00 6c c0 81 6c c0 81 00 84 00 6c c0 81   6c c0 81 00 84 00 48 d4 b6 48 d4 b6 48 d4 b6 48   d4 b6 48 d4 b6 48 d4 b6 00 84 00 6c c0 81 6c c0   81 00 84 00 6c c0 81 6c c0 81 00 84 00 6c c0 81   6c c0 81 00 84 00 48 d4 b6 48 d4 b6 48 d4 b6 27   55                                                
+// Segment 5/8
+bc 0f 05 6d   d3 92 6d d3 92 6d d3 92 00 84 00 6c c0 81 6c c0   81 6c c0 81 6c c0 81 6c c0 81 6c c0 81 6c c0 81   6c c0 81 00 84 00 6d d3 92 6d d3 92 6d d3 92 48   d4 85 48 d4 85 48 d4 85 00 84 00 6c c0 81 6c c0   81 6c c0 81 6c c0 81 6c c0 81 6c c0 81 6c c0 81   6c c0 81 00 84 00 48 d4 85 48 d4 85 48 d4 85 a6   55                                                
+// Segment 6/8
+bc 0f 06 48   d4 85 48 d4 85 48 d4 85 00 84 00 00 84 00 00 84   00 00 84 00 00 84 00 00 84 00 00 84 00 00 84 00   00 84 00 00 84 00 48 d4 85 48 d4 85 48 d4 85 54   e8 81 54 e8 81 54 e8 81 54 e8 81 54 e8 81 00 84   00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   54 e8 81 54 e8 81 54 e8 81 54 e8 81 54 e8 81 21   55                                                
+// Segment 7/8
+bc 0f 07 2e   d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 00 84   00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   2e d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 2e d5 5f 6d   c7 92 6d c7 92 6d c7 92 6d c7 92 6d c7 92 00 84   00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   6d c7 92 6d c7 92 6d c7 92 6d c7 92 6d c7 92 1e   55                                                
+// Segment 8/8
+bc 0f 08 54   93 81 54 93 81 54 93 81 54 93 81 54 93 81 00 84   00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00   54 93 81 54 93 81 54 93 81 54 93 81 54 93 81 54   93 81 54 93 81 54 93 81 54 93 81 54 93 81 00 84   00 6c c0 81 6c c0 81 6c c0 81 6c c0 81 00 84 00 54 93 81 54 93 81 54 93 81 54 93 81 54 93 81 af   55                                                
+bc 0f f2 08 09 55                                             
+bc 00 11 f2 04 55                                             
+// Start slideshow mode
+bc 00 12 12 55                                                
